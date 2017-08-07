@@ -34,3 +34,9 @@ PRODUCT_DEVICE := cedric
 PRODUCT_NAME := lineage_cedric
 PRODUCT_BRAND := motorola
 PRODUCT_MANUFACTURER := motorola
+
+# Fingerprint for cedric (from stock)
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    BUILD_FINGERPRINT=motorola/cedric/cedric:7.0/NPP25.137-33/31:user/release-keys \
+    PRIVATE_BUILD_DESC="cedric-7.0/NPP25.137-33/31:user/release-keys" \
+    PRODUCT_NAME="Moto G5"
