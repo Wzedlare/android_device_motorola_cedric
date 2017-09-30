@@ -24,6 +24,8 @@ import android.provider.Settings;
 
 import android.util.Log;
 
+import cyanogenmod.providers.CMSettings;
+
 public class CMActionsSettings {
     private static final String TAG = "CMActions";
 
@@ -34,6 +36,7 @@ public class CMActionsSettings {
     private static final String GESTURE_IR_SILENCER_KEY = "gesture_ir_silencer";
     private static final String GESTURE_FLIP_TO_MUTE_KEY = "gesture_flip_to_mute";
     private static final String GESTURE_LIFT_TO_SILENCE_KEY = "gesture_lift_to_silence";
+    private static final String NAVBAR_SHOWN = "navbar_shown";
 
     private final Context mContext;
     private final UpdatedStateNotifier mUpdatedStateNotifier;
@@ -131,6 +134,10 @@ public class CMActionsSettings {
             } else if (Constants.FP_HOME_KEY.equals(key) || Constants.FP_HAPTIC_KEY.equals(key) || Constants.FP_KEYS.equals(key) || Constants.FP_KEY_HOLD.equals(key) ||  Constants.FP_KEY_LEFT.equals(key) || Constants.FP_KEY_RIGHT.equals(key)) {
                 Constants.writePreference(mContext, key);
                 updated = false;
+            } else if (NAVBAR_SHOWN.equals(key)) {
+		int status = sharedPreferences.getBoolean(NAVBAR_SHOWN,false) ? 0 : 1;
+		CMSettings.Global.putInt(mContext.getContentResolver(),CMSettings.Global.DEV_FORCE_SHOW_NAVBAR, status);
+		updated = false;
             } else {
                 updated = false;
             }

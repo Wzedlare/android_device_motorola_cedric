@@ -63,6 +63,13 @@
             android:title="Fingerprint Gestures"
             android:summary="Use fingerprint gestures" />
 
+	<SwitchPreference
+            android:key="navbar_shown"
+            android:dependency="fp_home"
+            android:defaultValue="false"
+            android:title="Hide Navigation bar"
+            android:summary="Disable navigation bar when Fingerprint Gestures are enabled" />
+
         <SwitchPreference
             android:key="fp_haptic"
             android:dependency="fp_home"
