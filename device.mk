@@ -251,6 +251,7 @@ PRODUCT_COPY_FILES += \
 
 # Wifi
 PRODUCT_PACKAGES += \
+    wifi_symlinks \
     hostapd_default.conf \
     hostapd \
     wpa_supplicant \
@@ -265,22 +266,12 @@ PRODUCT_PACKAGES += \
     tcpdump \
     wcnss_service
 
-# Wifi Symlinks
-PRODUCT_PACKAGES += \
-    WCNSS_qcom_cfg.ini \
-    WCNSS_qcom_wlan_nv.bin \
-    WCNSS_qcom_wlan_nv_Argentina.bin \
-    WCNSS_qcom_wlan_nv_Brazil.bin \
-    WCNSS_qcom_wlan_nv_India.bin \
-    WCNSS_wlan_dictionary.dat
-
 # Wifi Configurations
 PRODUCT_COPY_FILES += \
     kernel/motorola/msm8937/drivers/staging/prima/firmware_bin/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
     device/motorola/cedric/wifi/WCNSS_qcom_cfg.ini:system/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini
 
-
-#ANT+
+# ANT+
 PRODUCT_COPY_FILES += \
     external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:system/etc/permissions/com.dsi.ant.antradio_library.xml
 
