@@ -17,7 +17,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Overlay
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+DEVICE_PACKAGE_OVERLAYS += device/motorola/cedric/overlay
 
 $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
 
@@ -71,31 +71,31 @@ PRODUCT_PACKAGES += \
 # Audio Configurations
 PRODUCT_COPY_FILES += \
     hardware/qcom/audio-caf/msm8996/configs/msm8937/aanc_tuning_mixer.txt:system/etc/aanc_tuning_mixer.txt \
-    $(LOCAL_PATH)/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf \
-    $(LOCAL_PATH)/audio/audio_output_policy.conf:system/vendor/etc/audio_output_policy.conf \
-    $(LOCAL_PATH)/audio/audio_ext_spkr.conf:system/etc/audio_ext_spkr.conf \
-    $(LOCAL_PATH)/audio/audio_platform_info.xml:system/etc/audio_platform_info.xml \
-    $(LOCAL_PATH)/audio/audio_platform_info_extcodec.xml:system/etc/audio_platform_info_extcodec.xml \
-    $(LOCAL_PATH)/audio/audio_policy.conf:system/etc/audio_policy.conf \
-    $(LOCAL_PATH)/audio/mixer_paths.xml:system/etc/mixer_paths.xml \
-    $(LOCAL_PATH)/audio/mixer_paths_mtp.xml:system/etc/mixer_paths_mtp.xml \
-    $(LOCAL_PATH)/audio/mixer_paths_qrd_sku1.xml:system/etc/mixer_paths_qrd_sku1.xml \
-    $(LOCAL_PATH)/audio/mixer_paths_qrd_sku2.xml:system/etc/mixer_paths_qrd_sku2.xml \
-    $(LOCAL_PATH)/audio/mixer_paths_qrd_skuh.xml:system/etc/mixer_paths_qrd_skuh.xml \
-    $(LOCAL_PATH)/audio/mixer_paths_qrd_skuhf.xml:system/etc/mixer_paths_qrd_skuhf.xml \
-    $(LOCAL_PATH)/audio/mixer_paths_qrd_skui.xml:system/etc/mixer_paths_qrd_skui.xml \
-    $(LOCAL_PATH)/audio/mixer_paths_qrd_skum.xml:system/etc/mixer_paths_qrd_skum.xml \
-    $(LOCAL_PATH)/audio/mixer_paths_qrd_skun.xml:system/etc/mixer_paths_qrd_skun.xml \
-    $(LOCAL_PATH)/audio/mixer_paths_skuk.xml:system/etc/mixer_paths_skuk.xml \
-    $(LOCAL_PATH)/audio/mixer_paths_wcd9306.xml:system/etc/mixer_paths_wcd9306.xml \
-    $(LOCAL_PATH)/audio/mixer_paths_wcd9326.xml:system/etc/mixer_paths_wcd9326.xml \
-    $(LOCAL_PATH)/audio/mixer_paths_wcd9330.xml:system/etc/mixer_paths_wcd9330.xml \
-    $(LOCAL_PATH)/audio/mixer_paths_wcd9335.xml:system/etc/mixer_paths_wcd9335.xml \
-    $(LOCAL_PATH)/audio/sound_trigger_mixer_paths.xml:system/etc/sound_trigger_mixer_paths.xml \
-    $(LOCAL_PATH)/audio/sound_trigger_mixer_paths_wcd9306.xml:system/etc/sound_trigger_mixer_paths_wcd9306.xml \
-    $(LOCAL_PATH)/audio/sound_trigger_mixer_paths_wcd9330.xml:system/etc/sound_trigger_mixer_paths_wcd9330.xml \
-    $(LOCAL_PATH)/audio/sound_trigger_mixer_paths_wcd9335.xml:system/etc/sound_trigger_mixer_paths_wcd9335.xml \
-    $(LOCAL_PATH)/audio/sound_trigger_platform_info.xml:system/etc/sound_trigger_platform_info.xml
+    device/motorola/cedric/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf \
+    device/motorola/cedric/audio/audio_output_policy.conf:system/vendor/etc/audio_output_policy.conf \
+    device/motorola/cedric/audio/audio_ext_spkr.conf:system/etc/audio_ext_spkr.conf \
+    device/motorola/cedric/audio/audio_platform_info.xml:system/etc/audio_platform_info.xml \
+    device/motorola/cedric/audio/audio_platform_info_extcodec.xml:system/etc/audio_platform_info_extcodec.xml \
+    device/motorola/cedric/audio/audio_policy.conf:system/etc/audio_policy.conf \
+    device/motorola/cedric/audio/mixer_paths.xml:system/etc/mixer_paths.xml \
+    device/motorola/cedric/audio/mixer_paths_mtp.xml:system/etc/mixer_paths_mtp.xml \
+    device/motorola/cedric/audio/mixer_paths_qrd_sku1.xml:system/etc/mixer_paths_qrd_sku1.xml \
+    device/motorola/cedric/audio/mixer_paths_qrd_sku2.xml:system/etc/mixer_paths_qrd_sku2.xml \
+    device/motorola/cedric/audio/mixer_paths_qrd_skuh.xml:system/etc/mixer_paths_qrd_skuh.xml \
+    device/motorola/cedric/audio/mixer_paths_qrd_skuhf.xml:system/etc/mixer_paths_qrd_skuhf.xml \
+    device/motorola/cedric/audio/mixer_paths_qrd_skui.xml:system/etc/mixer_paths_qrd_skui.xml \
+    device/motorola/cedric/audio/mixer_paths_qrd_skum.xml:system/etc/mixer_paths_qrd_skum.xml \
+    device/motorola/cedric/audio/mixer_paths_qrd_skun.xml:system/etc/mixer_paths_qrd_skun.xml \
+    device/motorola/cedric/audio/mixer_paths_skuk.xml:system/etc/mixer_paths_skuk.xml \
+    device/motorola/cedric/audio/mixer_paths_wcd9306.xml:system/etc/mixer_paths_wcd9306.xml \
+    device/motorola/cedric/audio/mixer_paths_wcd9326.xml:system/etc/mixer_paths_wcd9326.xml \
+    device/motorola/cedric/audio/mixer_paths_wcd9330.xml:system/etc/mixer_paths_wcd9330.xml \
+    device/motorola/cedric/audio/mixer_paths_wcd9335.xml:system/etc/mixer_paths_wcd9335.xml \
+    device/motorola/cedric/audio/sound_trigger_mixer_paths.xml:system/etc/sound_trigger_mixer_paths.xml \
+    device/motorola/cedric/audio/sound_trigger_mixer_paths_wcd9306.xml:system/etc/sound_trigger_mixer_paths_wcd9306.xml \
+    device/motorola/cedric/audio/sound_trigger_mixer_paths_wcd9330.xml:system/etc/sound_trigger_mixer_paths_wcd9330.xml \
+    device/motorola/cedric/audio/sound_trigger_mixer_paths_wcd9335.xml:system/etc/sound_trigger_mixer_paths_wcd9335.xml \
+    device/motorola/cedric/audio/sound_trigger_platform_info.xml:system/etc/sound_trigger_platform_info.xml
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -106,9 +106,9 @@ PRODUCT_PACKAGES += \
 
 # Camera Configurations
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/camera/msm8937_mot_camera.xml:system/etc/camera/msm8937_mot_camera.xml \
-    $(LOCAL_PATH)/configs/camera/mot_ov5695_chromatix.xml:system/etc/camera/mot_ov5695_chromatix.xml \
-    $(LOCAL_PATH)/configs/camera/mot_imx258_chromatix.xml:system/etc/camera/mot_imx258_chromatix.xml
+    device/motorola/cedric/configs/camera/msm8937_mot_camera.xml:system/etc/camera/msm8937_mot_camera.xml \
+    device/motorola/cedric/configs/camera/mot_ov5695_chromatix.xml:system/etc/camera/mot_ov5695_chromatix.xml \
+    device/motorola/cedric/configs/camera/mot_imx258_chromatix.xml:system/etc/camera/mot_imx258_chromatix.xml
 
 # CMActions
 PRODUCT_PACKAGES += \
@@ -143,7 +143,7 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint IDC
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/idc/uinput-fpc.idc:system/usr/idc/uinput-fpc.idc
+    device/motorola/cedric/idc/uinput-fpc.idc:system/usr/idc/uinput-fpc.idc
 
 # FM
 PRODUCT_PACKAGES += \
@@ -152,12 +152,12 @@ PRODUCT_PACKAGES += \
 
 # GPS Configurations
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/gps/etc/flp.conf:system/etc/flp.conf \
-    $(LOCAL_PATH)/gps/etc/gps.conf:system/etc/gps.conf \
-    $(LOCAL_PATH)/gps/etc/izat.conf:system/etc/izat.conf \
-    $(LOCAL_PATH)/gps/etc/lowi.conf:system/etc/lowi.conf \
-    $(LOCAL_PATH)/gps/etc/sap.conf:system/etc/sap.conf \
-    $(LOCAL_PATH)/gps/etc/xtwifi.conf:system/etc/xtwifi.conf
+    device/motorola/cedric/gps/etc/flp.conf:system/etc/flp.conf \
+    device/motorola/cedric/gps/etc/gps.conf:system/etc/gps.conf \
+    device/motorola/cedric/gps/etc/izat.conf:system/etc/izat.conf \
+    device/motorola/cedric/gps/etc/lowi.conf:system/etc/lowi.conf \
+    device/motorola/cedric/gps/etc/sap.conf:system/etc/sap.conf \
+    device/motorola/cedric/gps/etc/xtwifi.conf:system/etc/xtwifi.conf
 
 # IMS
 PRODUCT_PACKAGES += \
@@ -170,16 +170,16 @@ PRODUCT_PACKAGES += \
 
 # IRSC
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/sec_config:system/etc/sec_config
+    device/motorola/cedric/configs/sec_config:system/etc/sec_config
 
 # Keylayouts
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/keylayout/ft5x06_ts.kl:system/usr/keylayout/ft5x06_ts.kl \
-    $(LOCAL_PATH)/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
-    $(LOCAL_PATH)/keylayout/qpnp_pon.kl:system/usr/keylayout/qpnp_pon.kl \
-    $(LOCAL_PATH)/keylayout/synaptics_dsx.kl:system/usr/keylayout/synaptics_dsx.kl \
-    $(LOCAL_PATH)/keylayout/synaptics_rmi4_i2c.kl:system/usr/keylayout/synaptics_rmi4_i2c.kl \
-    $(LOCAL_PATH)/keylayout/uinput-fpc.kl:system/usr/keylayout/uinput-fpc.kl
+    device/motorola/cedric/keylayout/ft5x06_ts.kl:system/usr/keylayout/ft5x06_ts.kl \
+    device/motorola/cedric/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
+    device/motorola/cedric/keylayout/qpnp_pon.kl:system/usr/keylayout/qpnp_pon.kl \
+    device/motorola/cedric/keylayout/synaptics_dsx.kl:system/usr/keylayout/synaptics_dsx.kl \
+    device/motorola/cedric/keylayout/synaptics_rmi4_i2c.kl:system/usr/keylayout/synaptics_rmi4_i2c.kl \
+    device/motorola/cedric/keylayout/uinput-fpc.kl:system/usr/keylayout/uinput-fpc.kl
 
 # Lights
 PRODUCT_PACKAGES += \
@@ -200,11 +200,11 @@ PRODUCT_PACKAGES += \
 
 # Media Configurations
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml \
-    $(LOCAL_PATH)/configs/media_codecs_8956.xml:system/etc/media_codecs_8956.xml \
-    $(LOCAL_PATH)/configs/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
-    $(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml \
-    $(LOCAL_PATH)/configs/media_profiles_8956.xml:system/etc/media_profiles_8956.xml
+    device/motorola/cedric/configs/media_codecs.xml:system/etc/media_codecs.xml \
+    device/motorola/cedric/configs/media_codecs_8956.xml:system/etc/media_codecs_8956.xml \
+    device/motorola/cedric/configs/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
+    device/motorola/cedric/configs/media_profiles.xml:system/etc/media_profiles.xml \
+    device/motorola/cedric/configs/media_profiles_8956.xml:system/etc/media_profiles_8956.xml
 
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
@@ -241,12 +241,12 @@ PRODUCT_PACKAGES += \
 
 # Sensor Configurations
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/sensors/hals.conf:system/etc/sensors/hals.conf \
-    $(LOCAL_PATH)/configs/sensors/sensor_def_qcomdev.conf:system/etc/sensors/sensor_def_qcomdev.conf
+    device/motorola/cedric/configs/sensors/hals.conf:system/etc/sensors/hals.conf \
+    device/motorola/cedric/configs/sensors/sensor_def_qcomdev.conf:system/etc/sensors/sensor_def_qcomdev.conf
 
 # Thermal
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/thermal-engine-cedric.conf:system/etc/thermal-engine-cedric.conf
+    device/motorola/cedric/configs/thermal-engine-cedric.conf:system/etc/thermal-engine-cedric.conf
 
 # Wifi
 PRODUCT_PACKAGES += \
@@ -276,7 +276,7 @@ PRODUCT_PACKAGES += \
 # Wifi Configurations
 PRODUCT_COPY_FILES += \
     kernel/motorola/msm8937/drivers/staging/prima/firmware_bin/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
-    $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:system/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini
+    device/motorola/cedric/wifi/WCNSS_qcom_cfg.ini:system/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini
 
 
 #ANT+
