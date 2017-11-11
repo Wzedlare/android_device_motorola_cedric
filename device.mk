@@ -19,8 +19,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += device/motorola/cedric/overlay
 
-$(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
-
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:system/etc/permissions/android.hardware.bluetooth.xml \
