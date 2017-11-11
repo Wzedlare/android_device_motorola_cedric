@@ -32,8 +32,7 @@ import com.cyanogenmod.settings.device.ServiceWrapper.LocalBinder;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
     static final String TAG = "CMActions";
-    final String NAVBAR_SHOWN = "navbar_shown";
-    final String IS_FIRSTBOOT = "is_first_boot";
+    final String NAVBAR_HIDDEN = "navbar_hidden";
     private ServiceWrapper mServiceWrapper;
 
     @Override
@@ -47,10 +46,9 @@ public class BootCompletedReceiver extends BroadcastReceiver {
 
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
 
-        if (preferences.getBoolean(IS_FIRSTBOOT, true)) {
+        if (!preferences.getBoolean(NAVBAR_HIDDEN, false)) {
             enableNaviBar(true, context);
-            preferences.edit().putBoolean(NAVBAR_SHOWN, true).commit();
-            preferences.edit().putBoolean(IS_FIRSTBOOT, false).commit();
+            preferences.edit().putBoolean(NAVBAR_HIDDEN, false).commit();
         }
 
         context.startService(new Intent(context, ServiceWrapper.class));
